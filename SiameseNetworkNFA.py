@@ -90,9 +90,9 @@ class SiameseModel():
         
         pass
     
-    def train(self,  trainDataX, trainDataY, epoch = 10):
+    def train(self,  trainDataX, trainDataY, epoch = 10, withNFA=True):
         # Create dataset and train with NFA
-        trainDataset = CustomDataset(trainDataX, trainDataY, True)
+        trainDataset = CustomDataset(trainDataX, trainDataY, withNFA)
         train_loader = DataLoader(trainDataset, batch_size=64, shuffle=True)   
         
         optimizer = optim.Adam(self.model.parameters(), lr=0.0001)
