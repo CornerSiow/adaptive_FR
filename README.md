@@ -44,3 +44,26 @@ cv2.destroyAllWindows()
 feature = descriptor.extractFacialFeatures(face)
 print(feature)
 ```
+
+## Siamese Network with NFA
+User can use Siamese Netowork to learn the feature.
+
+```
+# Step 1) Create the dataset using the following format
+dataX = np.asarray([[...],[...],[...],[...],[...]])
+dataY = np.asarray([1,2,1,5,4])
+
+# Step 2) Create the Siamese Model, can use cuda instead of cpu
+model = SiameseModel('cpu')
+
+# Step 3) Train the siamese model with 10 epochs using NFA (Negative Augmented Feature)
+model.train(trainDataX, trainDataY, epoch=10, withNFA=True)
+
+# Step 4) After trained, can use the model to output the Siamese feature
+feature = model.process(feature)
+```
+
+
+
+
+
