@@ -17,7 +17,7 @@ import random
 from GNG import GNG
 from sklearn.metrics.pairwise import cosine_similarity
 
-from SiameseNetworkLearning import SiameseModel
+from SiameseNetworkNFA import SiameseModel
 
 # Set the threshold
 threshold = 0.8
