@@ -3,21 +3,21 @@ It use GNG to store the tiny changes of face features to achieve an adaptive fac
 
 ## GNG
 User can use the GNG to act as a short-term memory feature to track the feature changes during time-series data.
-Step 1) Create GNG Network
 ```
+# Step 1) Create GNG Network
 gng = GNG(512)
-```
 
-Step 2) Initializing the network using data. (Optional)
+# Step 2) Initializing the network using data. (Optional)
 gng.initializing(f1, f2)
 
-continuous learn the inpu
+# continuous learn the input data
 while True:
+     # Read the time series data
      ...
-     Step 3) Learn the time-series data / temporal data
+     #Step 3) Learn the time-series data / temporal data
      gng.pushData(feature)
 
-Step 4) Find max similarity
+# Step 4) Find max similarity
 similarity = gng.getMaxSimilarity(feature)
 print("Similarity after learning",similarity)
-
+```
