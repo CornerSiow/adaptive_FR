@@ -31,6 +31,7 @@ def getMaxSimilarity(inp, data):
     return maxSimilarity
 
 # Load the extracted facial database.
+# The features extracted from the FaceNet model pre-trained on VGGFace2
 with open('material/rt1_aligned_facial_features.pickle', 'rb') as handle:
     dataX, dataY, className = pickle.load(handle)
     
