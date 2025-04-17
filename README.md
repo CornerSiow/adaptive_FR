@@ -1,5 +1,5 @@
 # Adaptive FR
-It use GNG to store the tiny changes of face features to achieve an adaptive face recognition system
+It use GNG to store the tiny changes of face features to achieve an adaptive face recognition system. Meanwhile, by using Siamese network with NFA, it can train the model faster than using real image.
 
 ## GNG
 User can use the GNG to act as a short-term memory feature to track the feature changes during time-series data.
